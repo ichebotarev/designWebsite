@@ -1,0 +1,182 @@
+                            * {
+                                margin: 0;
+                                padding: 0;
+                                box-sizing: border-box;
+                            }
+                            
+                            body {
+                                animation-name: blueToWhite;
+                                animation-duration: 80s;
+                                animation-iteration-count: infinite;
+                                animation-direction: alternate;
+                                animation-timing-function: ease-in-out;
+                            }
+                            
+                            @keyframes blueToWhite {
+                                0% {
+                                    background-color: rgba(0, 68, 255, 0);
+                                }
+                                25% {
+                                    background-color: rgba(255, 0, 0, .85);
+                                }
+                                70% {
+                                    background-color: rgba(255, 0, 0, .95);
+                                }
+                                75% {
+                                    background-color: rgba(245, 0, 0, .99);
+                                }
+                                100% {
+                                    background-color: rgb(240, 51, 51, 1);
+                                }
+                            }
+                            
+                            .landing {
+                                position: relative;
+                                display: flex;
+                                flex-direction: column;
+                                text-align: center;
+                                justify-content: center;
+                                align-items: center;
+                                top: 20em;
+                            }
+                            
+                            h1 {
+                                font-size: 1em;
+                                font-family: "Adobe Kaiti Std";
+                                color: black;
+                                filter: blur(1px);
+                            }
+                            
+                            .myNameLarge {
+                                position: fixed;
+                                left: 0%;
+                                max-width: 100%;
+                                transform: rotate(90deg);
+                                margin: 0 0 0 15em;
+                            }
+                            
+                            .myNameLarge>h3 {
+                                font-family: "Rand Mono";
+                                font-size: 1em;
+                                line-height: 100vh;
+                                filter: blur(1px);
+                                transform: scaleY(.5);
+                            }
+                            
+                            .myNameLargeRight {
+                                position: fixed;
+                                right: 0%;
+                                max-width: 100%;
+                                transform: rotate(-90deg);
+                                margin: 0 15em 0 0;
+                            }
+                            
+                            .myNameLargeRight>h3 {
+                                font-family: "Rand Mono";
+                                font-size: 1em;
+                                line-height: 100vh;
+                                filter: blur(1px);
+                                transform: scaleY(.5);
+                            }
+                            
+                            a {
+                                text-decoration: none;
+                                color: black;
+                            }
+                            
+                            .landing .textureWrapper>img {
+                                object-fit: fill;
+                                position: fixed;
+                                max-width: 100%;
+                                top: 0%;
+                                left: 0%;
+                                right: 0%;
+                                bottom: 0%;
+                                mix-blend-mode: lighten;
+                                z-index: 3;
+                                pointer-events: none;
+                                opacity: 20%;
+                                filter: invert(100%);
+                            }
+                            
+                            .landing .textureWrapperTwo>img {
+                                object-fit: fill;
+                                position: fixed;
+                                max-width: 100%;
+                                top: 0%;
+                                left: 0%;
+                                right: 0%;
+                                bottom: 0%;
+                                mix-blend-mode: soft-light;
+                                filter: invert(100%);
+                                z-index: 4;
+                                pointer-events: none;
+                                opacity: 50%;
+                            }
+                            
+                            .landing .imageOne>img {
+                                max-width: 20%;
+                                position: relative;
+                                mix-blend-mode: multiply;
+                            }
+                            
+                            .landing .imageTwo>img {
+                                max-width: 50%;
+                                position: absolute;
+                                mix-blend-mode: darken;
+                                z-index: 1;
+                                bottom: 4em;
+                                left: 40em;
+                                opacity: 20%;
+                                align-self: center;
+                                border-color: rgba(255, 255, 255, 1);
+                            }
+                            
+                            .landing:hover .imageTwo>img {
+                                border-style: solid;
+                                border-width: 2px;
+                                border-color: rgba(0, 0, 0, 1);
+                                mix-blend-mode: hard-light;
+                                opacity: 100%;
+                                transition: opacity border-color, 2s ease-in-out;
+                                transition-duration: 4s;
+                                transition-timing-function: steps();
+                            }
+                            
+                            .landing:hover .imageOne>img {
+                                opacity: 0%;
+                                transition: opacity linear;
+                            }
+                            /*@keyframes slowFade {
+                                100% {}
+                            }*/
+                            
+                            .landing .imageThree>img {
+                                opacity: 80%;
+                                max-width: 60%;
+                                position: relative;
+                                bottom: 10vw;
+                            }
+                            
+                            .landing .enter {
+                                position: absolute;
+                                bottom: 2rem;
+                                z-index: 2;
+                            }
+                            /*footer*/
+                            
+                            .nameFooterWrapper {
+                                position: fixed;
+                                height: 100%;
+                                width: 100%;
+                                font-size: 3vh;
+                                margin: auto;
+                                font-family: "paskowy";
+                                bottom: 0px;
+                                filter: blur(1px);
+                            }
+                            
+                            .nameFooter {
+                                text-align: center;
+                                line-height: 190vh;
+                            }

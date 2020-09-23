@@ -1,0 +1,377 @@
+                    * {
+                        margin: 0;
+                        padding: 0;
+                        box-sizing: border-box;
+                    }
+                    
+                    body {
+                        background-color: white;
+                    }
+                    
+                    .yellow-box {
+                        position: fixed;
+                        display: flex;
+                        margin: 10vh auto auto 10vh;
+                        background-color: yellow;
+                        opacity: 40;
+                        width: 100%;
+                        height: 30vh;
+                        pointer-events: none;
+                    }
+                    
+                    .blue-box {
+                        position: fixed;
+                        display: flex;
+                        margin: 10vh auto auto auto;
+                        background-color: rgb(0, 217, 255);
+                        opacity: 0%;
+                        width: 100%;
+                        height: 30vh;
+                        pointer-events: none;
+                    }
+                    
+                    #hideme {
+                        display: none;
+                    }
+                    
+                    .video-wrapper {
+                        position: fixed;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        overflow: hidden;
+                        z-index: 100;
+                        pointer-events: none;
+                    }
+                    
+                    .video-wrapper>video {
+                        mix-blend-mode: multiply;
+                        pointer-events: none;
+                    }
+                    
+                    .audio-player {
+                        opacity: 0%;
+                    }
+                    
+                    .bg-video-player {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        width: auto;
+                        height: auto;
+                        -webkit-transform: translate(-50%, -50%);
+                        -moz-transform: translate(-50%, -50%);
+                        -ms-transform: translate(-50%, -50%);
+                        transform: translate(-50%, -50%);
+                        pointer-events: none;
+                    }
+                    
+                    @media (max-width: 767px) {
+                        .bg-video-player {
+                            display: none;
+                        }
+                    }
+                    /*NAV BAR*/
+                    
+                    .nav-bar {
+                        font-family: "Fisk Bitmap Nr2";
+                        font-size: 1.75vh;
+                        width: 100%;
+                        overflow: hidden;
+                        display: flex;
+                        flex-wrap: wrap;
+                    }
+                    
+                    .nav-bar ul {
+                        justify-content: space-between;
+                        align-items: center;
+                        text-align: center;
+                        width: 100%;
+                        transform: scaleY(.5) translateX(-7%);
+                        overflow: hidden;
+                    }
+                    
+                    .nav-bar li {
+                        text-align: right;
+                        padding: 1vh;
+                    }
+                    
+                    .landing {
+                        position: relative;
+                        display: flex;
+                        flex-direction: column;
+                        text-align: center;
+                        justify-content: center;
+                        align-items: center;
+                        top: 20em;
+                    }
+                    
+                    h1 {
+                        font-size: 1em;
+                        font-family: "Adobe Kaiti Std";
+                        color: black;
+                        filter: blur(1px);
+                    }
+                    
+                    .side-name-wrapper .myNameLarge {
+                        position: fixed;
+                        left: 0%;
+                        max-width: 100%;
+                        transform: rotate(90deg);
+                        animation: fadeToLeft 2s forwards;
+                    }
+                    
+                    .side-name-wrapper .myNameLargeRight {
+                        position: fixed;
+                        right: 0%;
+                        max-width: 100%;
+                        transform: rotate(-90deg);
+                        margin: 0 15em 0 0;
+                        animation: fadeToRight 2s forwards;
+                    }
+                    
+                    @keyframes fadeToLeft {
+                        from {
+                            margin: 0 0 0 15em;
+                        }
+                        to {
+                            margin: 0 0 0 -3em;
+                        }
+                    }
+                    
+                    @keyframes fadeToRight {
+                        from {
+                            margin: 0 15em 0 0;
+                        }
+                        to {
+                            margin: 0 -3em 0 0;
+                        }
+                    }
+                    
+                    .myNameLarge {
+                        position: fixed;
+                        left: 0%;
+                        max-width: 100%;
+                        transform: rotate(90deg);
+                        margin: 0 0 0 15em;
+                    }
+                    
+                    .myNameLarge>h3 {
+                        font-family: "Rand Mono";
+                        font-size: 1em;
+                        line-height: 100vh;
+                        filter: blur(1px);
+                        transform: scaleY(.5);
+                    }
+                    
+                    .myNameLargeRight {
+                        position: fixed;
+                        right: 0%;
+                        max-width: 100%;
+                        transform: rotate(-90deg);
+                        margin: 0 15em 0 0;
+                    }
+                    
+                    .myNameLargeRight>h3 {
+                        font-family: "Rand Mono";
+                        font-size: 1em;
+                        line-height: 100vh;
+                        filter: blur(1px);
+                        transform: scaleY(.5);
+                    }
+                    
+                    a {
+                        text-decoration: none;
+                        color: black;
+                    }
+                    
+                    .landing .textureWrapper>img {
+                        object-fit: fill;
+                        position: fixed;
+                        max-width: 100%;
+                        top: 0%;
+                        left: 0%;
+                        right: 0%;
+                        bottom: 0%;
+                        mix-blend-mode: lighten;
+                        z-index: 3;
+                        pointer-events: none;
+                        opacity: 20%;
+                        filter: invert(100%);
+                    }
+                    
+                    .landing .textureWrapperTwo>img {
+                        object-fit: fill;
+                        position: fixed;
+                        max-width: 100%;
+                        top: 0%;
+                        left: 0%;
+                        right: 0%;
+                        bottom: 0%;
+                        mix-blend-mode: multiply;
+                        filter: invert(100%);
+                        z-index: 8;
+                        pointer-events: none;
+                        opacity: 10%;
+                    }
+                    
+                    .landing .loadingGif>img {
+                        max-width: 100%;
+                        position: relative;
+                        mix-blend-mode: color-burn;
+                    }
+                    
+                    .landing .loadingGif2>img {
+                        max-width: 100%;
+                        position: fixed;
+                        mix-blend-mode: multiply;
+                        opacity: 20%;
+                        bottom: 43.5%;
+                        left: 38.5%;
+                        z-index: 1;
+                        animation: gifShift 4s forwards;
+                    }
+                    
+                    .landing .loadingGif3>img {
+                        max-width: 100%;
+                        position: fixed;
+                        mix-blend-mode: hard-light;
+                        opacity: 20%;
+                        bottom: 20.5%;
+                        left: 73.5%;
+                        z-index: 1;
+                    }
+                    
+                    .landing .loadingGif4>img {
+                        max-width: 100%;
+                        position: fixed;
+                        mix-blend-mode: difference;
+                        opacity: 80%;
+                        bottom: 58%;
+                        left: 4.5%;
+                        z-index: 1;
+                    }
+                    
+                    @keyframes gifShift {
+                        from {
+                            bottom: 43.5%;
+                        }
+                        to {
+                            bottom: 58.5%;
+                        }
+                    }
+                    
+                    .rolling-poem {
+                        position: relative;
+                        top: 0;
+                        left: 0;
+                        bottom: 5vu;
+                        justify-content: center;
+                        justify-content: center;
+                        transform: translateY(-32vh);
+                        vertical-align: middle;
+                    }
+                    
+                    .boris {
+                        font-size: 6vh;
+                    }
+                    
+                    .rolling-boris {
+                        position: absolute;
+                        top: 45vh;
+                        left: 0;
+                        vertical-align: middle;
+                    }
+                    
+                    .rolling-boris marquee {
+                        font-size: 12vh;
+                        font-family: "DoublepointUltrablack";
+                    }
+                    
+                    .rolling-poem marquee {
+                        font-size: 2vh;
+                        font-family: "Franklin Gothic Demi";
+                        justify-content: center;
+                    }
+                    
+                    .landing .imageTwo>img {
+                        max-width: 50%;
+                        position: absolute;
+                        mix-blend-mode: darken;
+                        z-index: 1;
+                        bottom: 4em;
+                        left: 80vw;
+                        opacity: 20%;
+                        align-self: center;
+                        border-color: rgba(255, 255, 255, 1);
+                    }
+                    
+                    .landing:hover .imageTwo>img {
+                        border-style: solid;
+                        border-width: 2px;
+                        border-color: rgba(0, 0, 0, 1);
+                        mix-blend-mode: hard-light;
+                        opacity: 100%;
+                        transition-property: all;
+                        transition-duration: 2s;
+                        transition-timing-function: ease-in-out;
+                        transition-delay: 0.5ms;
+                    }
+                    /*@keyframes slowFade {
+                                100% {}
+                            }*/
+                    
+                    .landing .imageThree>img {
+                        max-width: 30%;
+                        position: relative;
+                        bottom: 19.5vw;
+                        right: 9.5vw;
+                        mix-blend-mode: divide;
+                        z-index: 2;
+                        transform: scaleX(4);
+                        animation: fadeOutForSpeech 10s forwards;
+                    }
+                    
+                    @keyframes fadeOutForSpeech {
+                        from {
+                            opacity: 100%;
+                        }
+                        to {
+                            opacity: 0%;
+                        }
+                    }
+                    
+                    @keyframes fadeToTop {
+                        from {
+                            bottom: 10vw;
+                        }
+                        to {
+                            bottom: 2vh;
+                        }
+                    }
+                    
+                    .landing .enter {
+                        position: absolute;
+                        bottom: 2rem;
+                        z-index: 2;
+                    }
+                    /*footer*/
+                    
+                    .nameFooterWrapper {
+                        position: fixed;
+                        height: 100%;
+                        width: 100%;
+                        font-size: 3vh;
+                        margin: auto;
+                        font-family: "paskowy";
+                        bottom: 0px;
+                        filter: blur(1px);
+                        pointer-events: none;
+                    }
+                    
+                    .nameFooter {
+                        text-align: center;
+                        line-height: 190vh;
+                        pointer-events: none;
+                    }
