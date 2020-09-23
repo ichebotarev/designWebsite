@@ -8,3 +8,5 @@ Animation is choppy on the home page.
 
 Responsivity issues, and missing fonts on all pages.
 Third page which every navbar link links to has inconsistent autoplays. 
+
+Need to consolidate files. 
